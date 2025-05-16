@@ -1,0 +1,37 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  prenom: MyString
+  nom: MyString
+  numero_passport: MyString
+  sexe: MyString
+  date_naissance: 2025-05-16
+  etat_civil: MyString
+  profession: MyString
+  nationalite: MyString
+  en_charge_de: MyString
+  type_visa: MyString
+  date_expiration: 2025-05-16
+  date_entree: 2025-05-16
+  frontalier: MyString
+  date_retour: 2025-05-16
+  adresse_rdc: MyString
+  date_enregistrement: 2025-05-16
+
+two:
+  prenom: MyString
+  nom: MyString
+  numero_passport: MyString
+  sexe: MyString
+  date_naissance: 2025-05-16
+  etat_civil: MyString
+  profession: MyString
+  nationalite: MyString
+  en_charge_de: MyString
+  type_visa: MyString
+  date_expiration: 2025-05-16
+  date_entree: 2025-05-16
+  frontalier: MyString
+  date_retour: 2025-05-16
+  adresse_rdc: MyString
+  date_enregistrement: 2025-05-16

@@ -1,0 +1,67 @@
+<div class="container my-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h1 class="mb-0">Passeports enregistrés</h1>
+    <%= link_to "Nouveau passeport", new_passport_path, class: "btn btn-success" %>
+  </div>
+
+  <!-- Formulaire de recherche et de filtre -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <%= form_with url: passports_path, method: :get, local: true, class: "row g-3" do %>
+        <div class="col-md-4">
+          <%= label_tag :search, "Recherche (prénom ou numéro passeport)" %>
+          <%= text_field_tag :search, params[:search], class: "form-control" %>
+        </div>
+        <div class="col-md-4">
+          <%= label_tag :nationalite, "Filtrer par nationalité" %>
+          <%= select_tag :nationalite, options_for_select(@nationalities, params[:nationalite]), include_blank: "Toutes", class: "form-select" %>
+        </div>
+        <div class="col-md-3">
+          <%= label_tag :date_entree, "Filtrer par date d'enregistrement" %>
+          <%= date_field_tag :date_entree, params[:date_entree], class: "form-control" %>
+        </div>
+        <div class="col-md-1 d-flex align-items-end">
+          <%= submit_tag "Filtrer", class: "btn btn-primary w-100" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <!-- Exportation -->
+  <div class="mb-3 text-end">
+    <%= link_to "Exporter en CSV", passports_path(format: :csv), class: "btn btn-outline-secondary" %>
+  </div>
+
+  <!-- Tableau des passeports -->
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th>Prénom</th>
+          <th>Nom Post-nom</th>
+          <th>Num. Passeport</th>
+          <th>Nationalité</th>
+          <th>Date Enregistrement</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @passports.each do |passport| %>
+          <tr>
+            <td><%= passport.prenom %></td>
+            <td><%= passport.nom%></td>
+            <td><%= passport.numero_passport %></td>
+            <td><%= passport.nationalite %></td>
+            <td><%= passport.date_entree %></td>
+            <td>
+              <div class="d-flex justify-content-between align-items-center mb-3"><%= link_to "Voir", passport_path(passport), class: "btn btn-sm btn-info me-2" %>
+                <%= link_to "Modifier", edit_passport_path(passport), class: "btn btn-sm btn-warning" %>
+                <%= button_to "Supprimer", passport_path(passport), method: :delete, data: { confirm: "Supprimer ce passeport ?" }, class: "btn btn-sm btn-danger" %>
+              </div>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

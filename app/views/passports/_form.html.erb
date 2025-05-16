@@ -1,0 +1,97 @@
+<%= form_with(model: passport) do |form| %>
+  <% if passport.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(passport.errors.count, "error") %> prohibited this passport from being saved:</h2>
+
+      <ul>
+        <% passport.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="row mb-3">
+  <div class="col-md-2">
+      <%= form.label :nationalite %>
+      <%= form.select :nationalite, ISO3166::Country.all.map(&:name), { prompt: "Sélectionner un pays" }, class: "form-select" %>
+    </div>
+
+  </div>
+   <div class="row mb-3">
+    <div class="col-md-2">
+      <%= form.label :prenom %>
+      <%= form.text_field :prenom, class: "form-control" %>
+    </div>
+    <div class="col-md-2">
+      <%= form.label :nom %>
+      <%= form.text_field :nom, class: "form-control" %>
+    </div>
+    <div class="col-md-2">
+      <%= form.label :numero_passport %>
+      <%= form.text_field :numero_passport, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-2">
+      <%= form.label :sexe %>
+      <%= form.select :sexe, ["Masculin", "Femine"], {prompt: "Sélectionner le sexe"}, class: "form-select" %>
+    </div>
+    <div class="col-md-2">
+      <%= form.label :date_naissance %>
+      <%= form.text_field :date_naissance, class: "form-control" %>
+    </div>
+    <div class="col-md-2">
+      <%= form.label :etat_civil %>
+      <%= form.select :etat_civil, ["Célibataire", "Marié(e)", "Divorcé(e)"], {prompt: "Sélectionner l'état civil"}, class: "form-select" %>
+  </div>
+
+ <div class="row mb-3">
+    <div class="col-md-2">
+      <%= form.label :profession %>
+      <%= form.text_field :profession, class: "form-control" %>
+    </div>
+    <div class="col-md-2">
+      <%= form.label :date_enregistrement %>
+      <%= form.text_field :date_enregistrement, class: "form-control" %>
+    </div>
+    <div class="col-md-2">
+      <%= form.label :en_charge_de %>
+      <%= form.text_field :en_charge_de, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-2">
+      <%= form.label :type_visa %>
+      <%= form.text_field :type_visa, class: "form-control" %>
+    </div>
+    <div class="col-md-2">
+      <%= form.label :date_expiration %>
+      <%= form.text_field :date_expiration, class: "form-control" %>
+    </div>
+    <div class="col-md-2">
+      <%= form.label :date_entree %>
+      <%= form.text_field :date_entree, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-2">
+      <%= form.label :frontalier %>
+      <%= form.text_field :frontalier, class: "form-control" %>
+    </div>
+    <div class="col-md-2">
+      <%= form.label :date_retour %>
+      <%= form.text_field :date_retour, class: "form-control" %>
+    </div>
+    <div class="col-md-2">
+      <%= form.label :adresse_rdc %>
+      <%= form.text_field :adresse_rdc, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="mt-3 text-center">
+    <%= form.submit class: "btn btn-success" %>
+  </div>
+<% end %>

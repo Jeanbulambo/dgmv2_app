@@ -1,0 +1,19 @@
+current directory: /home/jeanb01/Documents/projects/dgmv2_app/-/Documents/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+/usr/share/rvm/rubies/ruby-3.3.3/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/jeanb01/Documents/projects/dgmv2_app/-/Documents/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250516-17154-9bm4am sitelibdir\=./.gem.20250516-17154-9bm4am clean
+
+current directory: /home/jeanb01/Documents/projects/dgmv2_app/-/Documents/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250516-17154-9bm4am sitelibdir\=./.gem.20250516-17154-9bm4am
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/jeanb01/Documents/projects/dgmv2_app/-/Documents/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250516-17154-9bm4am sitelibdir\=./.gem.20250516-17154-9bm4am install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20250516-17154-9bm4am/debug
+
+current directory: /home/jeanb01/Documents/projects/dgmv2_app/-/Documents/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250516-17154-9bm4am sitelibdir\=./.gem.20250516-17154-9bm4am clean
