@@ -1,0 +1,22 @@
+current directory: /home/jeanb01/Documents/projects/dgmv2_app/-/Documents/ruby/3.3.0/gems/bootsnap-1.18.6/ext/bootsnap
+/usr/share/rvm/rubies/ruby-3.3.3/bin/ruby extconf.rb
+checking for fdatasync() in unistd.h... yes
+checking for whether -D_GNU_SOURCE is accepted as CPPFLAGS... yes
+checking for whether -O3 is accepted as CFLAGS... yes
+checking for whether -std=c99 is accepted as CFLAGS... yes
+creating Makefile
+
+current directory: /home/jeanb01/Documents/projects/dgmv2_app/-/Documents/ruby/3.3.0/gems/bootsnap-1.18.6/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20250516-17154-1ms41y sitelibdir\=./.gem.20250516-17154-1ms41y clean
+
+current directory: /home/jeanb01/Documents/projects/dgmv2_app/-/Documents/ruby/3.3.0/gems/bootsnap-1.18.6/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20250516-17154-1ms41y sitelibdir\=./.gem.20250516-17154-1ms41y
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/jeanb01/Documents/projects/dgmv2_app/-/Documents/ruby/3.3.0/gems/bootsnap-1.18.6/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20250516-17154-1ms41y sitelibdir\=./.gem.20250516-17154-1ms41y install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20250516-17154-1ms41y/bootsnap
+
+current directory: /home/jeanb01/Documents/projects/dgmv2_app/-/Documents/ruby/3.3.0/gems/bootsnap-1.18.6/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20250516-17154-1ms41y sitelibdir\=./.gem.20250516-17154-1ms41y clean
