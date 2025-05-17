@@ -1,11 +1,10 @@
-<% content_for :title, "New passport" %>
 
-<h1>New passport</h1>
-
-<%= render "form", passport: @passport %>
-
-<br>
-
-<div>
-  <%= link_to "Back to passports", passports_path %>
+<% content_for :title, "Nouveau Enregistrement" %>
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h3 class="text-center mb-4">Nouveau Enregistrement</h3>
+  <%= render "form", passport: @passport %>
+  <br>
+  <div>
+    <%= link_to "Retourne aux enregistrements", passports_path, class: "btn btn-sm btn-warning"%>
+  </div>
 </div>

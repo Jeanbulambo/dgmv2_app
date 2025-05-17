@@ -1,7 +1,8 @@
 <div class="container my-4">
   <div class="d-flex justify-content-between align-items-center mb-3">
-    <h1 class="mb-0">Passeports enregistrés</h1>
-    <%= link_to "Nouveau passeport", new_passport_path, class: "btn btn-success" %>
+    <h1 class="mb-0">DGM</h1>
+    <h3 class="mb-0">ENREGISTREMENT DES EXPATRIES</h3>
+    <%= link_to "Nouveau enregistrement", new_passport_path, class: "btn btn-success" %>
   </div>
 
   <!-- Formulaire de recherche et de filtre -->
@@ -38,10 +39,10 @@
       <thead class="table-dark">
         <tr>
           <th>Prénom</th>
-          <th>Nom Post-nom</th>
-          <th>Num. Passeport</th>
+          <th>Nom et Post-Nom</th>
+          <th>Numéro de passeport</th>
           <th>Nationalité</th>
-          <th>Date Enregistrement</th>
+          <th>Date d'entrée</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -56,7 +57,7 @@
             <td>
               <div class="d-flex justify-content-between align-items-center mb-3"><%= link_to "Voir", passport_path(passport), class: "btn btn-sm btn-info me-2" %>
                 <%= link_to "Modifier", edit_passport_path(passport), class: "btn btn-sm btn-warning" %>
-                <%= button_to "Supprimer", passport_path(passport), method: :delete, data: { confirm: "Supprimer ce passeport ?" }, class: "btn btn-sm btn-danger" %>
+                <%= button_to "Supprimer", passport_path(passport), method: :delete, data: { confirm: "Sûr de vouloir supprimer cet enregistrement ?" }, class: "btn btn-sm btn-danger" %>
               </div>
             </td>
           </tr>
