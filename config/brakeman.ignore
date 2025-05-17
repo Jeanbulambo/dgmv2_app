@@ -1,0 +1,4 @@
+# Ignorer les warnings "Deserialize" à faible confiance dans les gems
+- type: "Deserialize"
+  confidence: "Weak"
+  path: "/gems/"
